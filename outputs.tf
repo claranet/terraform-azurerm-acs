@@ -13,7 +13,32 @@ output "name" {
   value       = azurerm_communication_service.acs.name
 }
 
-output "identity_principal_id" {
-  description = "Azure Communication Services system identity principal ID"
-  value       = try(azurerm_communication_service.acs.identity[0].principal_id, null)
+output "ecs" {
+  description = "Email Communication Services output object"
+  value       = azurerm_email_communication_service.ecs
+}
+
+output "ecs_id" {
+  description = "Email Communication Services name"
+  value       = try(azurerm_email_communication_service.ecs[0].id, null)
+}
+
+output "ecs_name" {
+  description = "Email Communication Services name"
+  value       = try(azurerm_email_communication_service.ecs[0].name, null)
+}
+
+output "ecs_azure_managed_domain" {
+  description = "Email Communication Services Azure managed domain"
+  value       = azurerm_email_communication_service_domain.azure_managed_domain
+}
+
+output "ecs_custom_domains" {
+  description = "Email Communication Services custom domains"
+  value       = azurerm_email_communication_service_domain.custom_domain
+}
+
+output "service_principal" {
+  description = "Azure Communication Services service principal"
+  value       = module.service_principals
 }
