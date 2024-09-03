@@ -71,6 +71,8 @@ module "acs" {
   environment = var.environment
   stack       = var.stack
 
+  azure_tenant_id = var.azure_tenant_id
+
   logs_destinations_ids = [
     module.run.logs_storage_account_id,
     module.run.log_analytics_workspace_id
@@ -135,6 +137,7 @@ module "acs" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| azure\_tenant\_id | Azure tenant ID. | `string` | n/a | yes |
 | client\_name | Client name/account used in naming. | `string` | n/a | yes |
 | custom\_acs\_name | Custom Azure Communication Services name, generated if not set | `string` | `""` | no |
 | custom\_diagnostic\_settings\_name | Custom name of the diagnostics settings, name will be 'default' if not set. | `string` | `"default"` | no |
@@ -164,14 +167,15 @@ module "acs" {
 
 | Name | Description |
 |------|-------------|
-| acs | Azure Communication Services output object |
-| ecs | Email Communication Services output object |
-| ecs\_azure\_managed\_domain | Email Communication Services Azure managed domain |
-| ecs\_custom\_domains | Email Communication Services custom domains |
-| ecs\_id | Email Communication Services name |
-| ecs\_name | Email Communication Services name |
-| id | Azure Communication Services ID |
-| name | Azure Communication Services name |
+| acs | Azure Communication Services output object. |
+| ecs | Email Communication Services output object. |
+| ecs\_azure\_managed\_domain | Email Communication Services Azure managed domain. |
+| ecs\_custom\_domains | Email Communication Services custom domains. |
+| ecs\_id | Email Communication Services name. |
+| ecs\_name | Email Communication Services name. |
+| ecs\_smtp\_config | Email Communication Services SMTP configuration. Based on https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/email/send-email-smtp/smtp-authentication#creating-the-smtp-credentials-from-the-entra-application-information |
+| id | Azure Communication Services ID. |
+| name | Azure Communication Services name. |
 | service\_principal | Azure Communication Services service principal |
 <!-- END_TF_DOCS -->
 

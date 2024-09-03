@@ -39,6 +39,8 @@ module "acs" {
   environment = var.environment
   stack       = var.stack
 
+  azure_tenant_id = var.azure_tenant_id
+
   logs_destinations_ids = [
     module.run.logs_storage_account_id,
     module.run.log_analytics_workspace_id
