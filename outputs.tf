@@ -20,12 +20,12 @@ output "ecs" {
 
 output "ecs_id" {
   description = "Email Communication Services name."
-  value       = try(azurerm_email_communication_service.ecs[0].id, null)
+  value       = one(azurerm_email_communication_service.ecs[*].id)
 }
 
 output "ecs_name" {
   description = "Email Communication Services name."
-  value       = try(azurerm_email_communication_service.ecs[0].name, null)
+  value       = one(azurerm_email_communication_service.ecs[*].name)
 }
 
 output "ecs_azure_managed_domain" {
