@@ -4,11 +4,6 @@ variable "resource_group_name" {
   type        = string
 }
 
-variable "location" {
-  description = "Azure region to use."
-  type        = string
-}
-
 variable "location_short" {
   description = "Short string for Azure location."
   type        = string
@@ -26,5 +21,10 @@ variable "environment" {
 
 variable "stack" {
   description = "Project stack name."
+  type        = string
+}
+
+variable "azure_tenant_id" {
+  description = "Azure tenant ID."
   type        = string
 }
