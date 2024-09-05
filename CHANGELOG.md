@@ -19,7 +19,7 @@
 * **deps:** update pre-commit hook alessandrojcm/commitlint-pre-commit-hook to v9.17.0 37e7dfc
 * **deps:** update tools 9832084
 
-# Unreleased
+## 6.0.0
 
 Added
   * AZ-1443: Azure Communication Services module first release
