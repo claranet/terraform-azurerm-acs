@@ -13,7 +13,7 @@ output "name" {
   value       = azurerm_communication_service.main.name
 }
 
-output "ecs" {
+output "resource_ecs" {
   description = "Email Communication Services output object."
   value       = azurerm_email_communication_service.main
 }
@@ -49,7 +49,7 @@ output "ecs_smtp_config" {
   sensitive = true
 }
 
-output "service_principal" {
-  description = "Azure Communication Services service principal."
+output "module_service_principal" {
+  description = "Service principal module output."
   value       = module.service_principals
 }

@@ -90,7 +90,7 @@ module "acs" {
 | Name | Source | Version |
 |------|--------|---------|
 | diagnostics | claranet/diagnostic-settings/azurerm | ~> 8.0.0 |
-| service\_principals | git@git.fr.clara.net:claranet/projects/cloud/azure/terraform/modules/service-principal.git | rework/AZ-1088-v8 |
+| service\_principals | claranet/service-principal/azurerm | ~> 8.0.0 |
 
 ## Resources
 
@@ -141,16 +141,16 @@ module "acs" {
 
 | Name | Description |
 |------|-------------|
-| ecs | Email Communication Services output object. |
 | ecs\_azure\_managed\_domain | Email Communication Services Azure managed domain. |
 | ecs\_custom\_domains | Email Communication Services custom domains. |
 | ecs\_id | Email Communication Services name. |
 | ecs\_name | Email Communication Services name. |
 | ecs\_smtp\_config | Email Communication Services SMTP configuration. Based on [documentation](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/email/send-email-smtp/smtp-authentication#creating-the-smtp-credentials-from-the-entra-application-information). |
 | id | Azure Communication Services ID. |
+| module\_service\_principal | Service principal module output. |
 | name | Azure Communication Services name. |
 | resource | Azure Communication Services output object. |
-| service\_principal | Azure Communication Services service principal. |
+| resource\_ecs | Email Communication Services output object. |
 <!-- END_TF_DOCS -->
 
 ## Related documentation
