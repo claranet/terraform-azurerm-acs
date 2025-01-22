@@ -61,11 +61,13 @@ module "acs" {
       name                             = "foo.com"
       domain_management                = "CustomerManaged"
       user_engagement_tracking_enabled = false
+      association_enabled              = false
     },
     {
       name                             = "bar.fr"
       domain_management                = "CustomerManagedInExchangeOnline"
       user_engagement_tracking_enabled = true
+      association_enabled              = true
     },
     {
       name = "baz.com"
@@ -121,7 +123,7 @@ module "acs" {
 | default\_tags\_enabled | Option to enable or disable default tags. | `bool` | `true` | no |
 | diagnostic\_settings\_custom\_name | Custom name of the diagnostics settings, name will be 'default' if not set. | `string` | `"default"` | no |
 | ecs\_azure\_managed\_domain\_enabled | Use Azure auto-generated managed domain. | `bool` | `false` | no |
-| ecs\_custom\_domains | List of custom domains to be used for the Communication Service. Each object requires a `name` and `domain_management` field (Possible values are `CustomerManaged` or `CustomerManagedInExchangeOnline`). | <pre>list(object({<br/>    name                             = string<br/>    domain_management                = optional(string, "CustomerManaged")<br/>    user_engagement_tracking_enabled = optional(bool, false)<br/>  }))</pre> | `[]` | no |
+| ecs\_custom\_domains | List of custom domains to be used for the Communication Service. Each object requires a `name` and `domain_management` field (Possible values are `CustomerManaged` or `CustomerManagedInExchangeOnline`). | <pre>list(object({<br/>    name                             = string<br/>    domain_management                = optional(string, "CustomerManaged")<br/>    user_engagement_tracking_enabled = optional(bool, false)<br/>    association_enabled              = optional(bool, false)<br/>  }))</pre> | `[]` | no |
 | ecs\_enabled | Enable Email Communication Service. | `bool` | `false` | no |
 | ecs\_entra\_custom\_role\_enabled | Creates custom role to allow sending email from same subscription. | `bool` | `false` | no |
 | ecs\_entra\_sp\_enabled | Creates Service Principal to send emails. | `bool` | `false` | no |

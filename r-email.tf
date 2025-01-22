@@ -44,7 +44,7 @@ resource "azurerm_communication_service_email_domain_association" "azure_managed
 
 resource "azurerm_communication_service_email_domain_association" "custom_domain" {
   for_each = {
-    for custom_domain in var.ecs_custom_domains : custom_domain.name => custom_domain if var.ecs_enabled
+    for custom_domain in var.ecs_custom_domains : custom_domain.name => custom_domain if var.ecs_enabled && custom_domain.association_enabled
   }
 
   communication_service_id = azurerm_communication_service.main.id
