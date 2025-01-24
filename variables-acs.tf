@@ -21,6 +21,7 @@ variable "ecs_custom_domains" {
     name                             = string
     domain_management                = optional(string, "CustomerManaged")
     user_engagement_tracking_enabled = optional(bool, false)
+    association_enabled              = optional(bool, false)
   }))
   default = []
 }

@@ -25,11 +25,13 @@ module "acs" {
       name                             = "foo.com"
       domain_management                = "CustomerManaged"
       user_engagement_tracking_enabled = false
+      association_enabled              = false
     },
     {
       name                             = "bar.fr"
       domain_management                = "CustomerManagedInExchangeOnline"
       user_engagement_tracking_enabled = true
+      association_enabled              = true
     },
     {
       name = "baz.com"
