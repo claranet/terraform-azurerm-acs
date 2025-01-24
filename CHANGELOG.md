@@ -1,3 +1,24 @@
+## 8.1.0 (2025-01-24)
+
+### Features
+
+* add custom domain association switch 1dca7e6
+
+### Miscellaneous Chores
+
+* **deps:** update dependency opentofu to v1.8.6 0abfda9
+* **deps:** update dependency opentofu to v1.8.7 58a8c39
+* **deps:** update dependency opentofu to v1.8.8 909a053
+* **deps:** update dependency opentofu to v1.9.0 474cfe8
+* **deps:** update dependency pre-commit to v4.1.0 8d13595
+* **deps:** update dependency tflint to v0.55.0 532e2ef
+* **deps:** update dependency trivy to v0.58.0 6e8998f
+* **deps:** update dependency trivy to v0.58.1 d05f3b4
+* **deps:** update dependency trivy to v0.58.2 f6cbc03
+* **deps:** update pre-commit hook alessandrojcm/commitlint-pre-commit-hook to v9.19.0 30038b0
+* **deps:** update pre-commit hook alessandrojcm/commitlint-pre-commit-hook to v9.20.0 c852e8b
+* update tflint config for v0.55.0 ac73c01
+
 ## 8.0.0 (2024-11-22)
 
 ### ⚠ BREAKING CHANGES
