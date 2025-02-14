@@ -1,3 +1,16 @@
+## 8.1.1 (2025-02-14)
+
+### Documentation
+
+* fix changelog 7ffcddb
+
+### Miscellaneous Chores
+
+* **deps:** update dependency trivy to v0.59.1 d79c233
+* **deps:** update terraform claranet/service-principal/azurerm to ~> 8.1.0 f930693
+* **deps:** update tools d2c4aa7
+* update Github templates 6dc2a04
+
 ## 8.1.0 (2025-01-24)
 
 ### Features
