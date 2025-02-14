@@ -24,7 +24,6 @@
 ### ⚠ BREAKING CHANGES
 
 * **AZ-1088:** module v8 structure and updates
-* **AZ-1088:** module v8 structure and updates
 
 ### Features
 
