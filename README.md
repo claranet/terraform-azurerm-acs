@@ -92,7 +92,7 @@ module "acs" {
 | Name | Source | Version |
 |------|--------|---------|
 | diagnostics | claranet/diagnostic-settings/azurerm | ~> 8.0.0 |
-| service\_principals | claranet/service-principal/azurerm | ~> 8.0.0 |
+| service\_principals | claranet/service-principal/azurerm | ~> 8.1.0 |
 
 ## Resources
 
