@@ -83,21 +83,21 @@ module "acs" {
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | azurecaf | >= 1.2.28 |
 | azurerm | ~> 4.31 |
 
 ## Modules
 
 | Name | Source | Version |
-|------|--------|---------|
+| ---- | ------ | ------- |
 | diagnostics | claranet/diagnostic-settings/azurerm | ~> 8.2.0 |
 | service\_principals | claranet/service-principal/azurerm | ~> 8.2.0 |
 
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [azurerm_communication_service.main](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/communication_service) | resource |
 | [azurerm_communication_service_email_domain_association.azure_managed_domain](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/communication_service_email_domain_association) | resource |
 | [azurerm_communication_service_email_domain_association.custom_domain](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/communication_service_email_domain_association) | resource |
@@ -113,7 +113,7 @@ module "acs" {
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | azure\_tenant\_id | Azure tenant ID. | `string` | n/a | yes |
 | client\_name | Client name/account used in naming. | `string` | n/a | yes |
 | custom\_ecs\_name | Custom Azure Email Communication Services name, generated if not set. | `string` | `""` | no |
@@ -142,7 +142,7 @@ module "acs" {
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | ecs\_azure\_managed\_domain | Email Communication Services Azure managed domain. |
 | ecs\_custom\_domains | Email Communication Services custom domains. |
 | ecs\_id | Email Communication Services name. |
