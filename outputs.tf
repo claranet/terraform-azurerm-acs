@@ -1,6 +1,7 @@
 output "resource" {
   description = "Azure Communication Services output object."
   value       = azurerm_communication_service.main
+  sensitive   = true
 }
 
 output "id" {
@@ -16,6 +17,7 @@ output "name" {
 output "resource_ecs" {
   description = "Email Communication Services output object."
   value       = azurerm_email_communication_service.main
+  sensitive   = true
 }
 
 output "ecs_id" {
