@@ -45,7 +45,7 @@ output "ecs_smtp_config" {
   value = {
     host     = "smtp.azurecomm.net"
     port     = 587
-    username = format("%s.%s.%s", azurerm_communication_service.main.name, one(module.service_principals[*].app_id), var.azure_tenant_id)
+    username = try(format("%s.%s.%s", azurerm_communication_service.main.name, one(module.service_principals[*].app_id), var.azure_tenant_id), "")
     password = one(module.service_principals[*].secret_key)
   }
   sensitive = true
