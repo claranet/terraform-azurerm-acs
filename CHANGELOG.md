@@ -1,3 +1,15 @@
+## 8.1.6 (2026-06-05)
+
+### Bug Fixes
+
+* **AZ-1651:** 🐛 handle empty username in SMTP configuration 2b3bba1
+
+### Miscellaneous Chores
+
+* **deps:** update dependency opentofu to v1.12.1 2e4878c
+* **deps:** update pre-commit hook tofuutils/pre-commit-opentofu to v2.4.0 74a9651
+* **deps:** update tools ebe841d
+
 ## 8.1.5 (2026-06-02)
 
 ### Bug Fixes
