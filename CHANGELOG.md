@@ -1,3 +1,20 @@
+## 8.1.7 (2026-07-20)
+
+### Bug Fixes
+
+* **tflint:** 🐛 bump Azure rules version, fix signature bug 43718f2
+
+### Miscellaneous Chores
+
+* **deps:** update dependency claranet/service-principal/azurerm to ~> 8.4.0 4356b94
+* **deps:** update dependency opentofu to v1.12.2 3d365dc
+* **deps:** update dependency opentofu to v1.12.3 13348f1
+* **deps:** update dependency opentofu to v1.12.4 f114a86
+* **deps:** update dependency tflint to v0.63.1 9359903
+* **deps:** update pre-commit hook tofuutils/pre-commit-opentofu to v2.4.1 2bb46f0
+* **deps:** update pre-commit hook tofuutils/pre-commit-opentofu to v2.4.2 0816b8a
+* merge remote-tracking branch 'origin/renovate/claranet-service-principal-azurerm-8.x' cd16795
+
 ## 8.1.6 (2026-06-05)
 
 ### Bug Fixes
