@@ -43,3 +43,21 @@ variable "ecs_entra_sp_owners" {
   type        = list(string)
   default     = []
 }
+
+variable "ecs_entra_sp_token_display_name" {
+  description = "A display name for the Service Principal's password."
+  type        = string
+  default     = "Terraform managed secret"
+}
+
+variable "ecs_entra_sp_token_validity_duration" {
+  description = "Service Principal token/password duration before it expires. Defaults to 2 years. See [documentation](https://pkg.go.dev/time#ParseDuration)."
+  type        = string
+  default     = "${24 * 365 * 2}h" # 2 years
+}
+
+variable "ecs_entra_sp_token_validity_end_date" {
+  description = "Service Principal token/password end date. This property cannot be used alongside `var.ecs_entra_sp_token_validity_duration`."
+  type        = string
+  default     = null
+}
