@@ -128,6 +128,9 @@ module "acs" {
 | ecs\_entra\_custom\_role\_enabled | Creates custom role to allow sending email from same subscription. | `bool` | `false` | no |
 | ecs\_entra\_sp\_enabled | Creates Service Principal to send emails. | `bool` | `false` | no |
 | ecs\_entra\_sp\_owners | Service Principal owners. | `list(string)` | `[]` | no |
+| ecs\_entra\_sp\_token\_display\_name | A display name for the Service Principal's password. | `string` | `"Terraform managed secret"` | no |
+| ecs\_entra\_sp\_token\_validity\_duration | Service Principal token/password duration before it expires. Defaults to 2 years. See [documentation](https://pkg.go.dev/time#ParseDuration). | `string` | `"17520h"` | no |
+| ecs\_entra\_sp\_token\_validity\_end\_date | Service Principal token/password end date. This property cannot be used alongside `var.ecs_entra_sp_token_validity_duration`. | `string` | `null` | no |
 | environment | Project environment. | `string` | n/a | yes |
 | extra\_tags | Additional tags to add on resources. | `map(string)` | `{}` | no |
 | location\_short | Short string for Azure location. | `string` | n/a | yes |
