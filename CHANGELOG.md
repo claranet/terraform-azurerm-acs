@@ -1,3 +1,27 @@
+## 9.0.0 (2026-08-24)
+
+### ⚠ BREAKING CHANGES
+
+* **SREAA-368:** Minimum OpenTofu version raised to 1.12. AzureRM provider minimum raised to 5.0. Dependency modules bumped to v9
+  (claranet/diagnostic-settings ~> 9.0, claranet/service-principal ~> 9.0).
+
+### Features
+
+* ✨ add service principal [secure] variables ef5ba27
+* **SREAA-368:** upgrade module to v9 (OpenTofu >= 1.12, AzureRM ~> 5.0) 79b32f5
+
+### Continuous Integration
+
+* **SREAA-368:** 👷 point the pipeline include back at the ci master branch 478a880
+
+### Miscellaneous Chores
+
+* **deps:** update dependency claranet/service-principal/azurerm to ~> 8.5.0 9060bbb
+* **deps:** update dependency opentofu to v1.12.5 f3ff498
+* **deps:** update dependency tflint to v0.64.0 25a49d6
+* **SREAA-368:** 🔗 bump azurecaf to ~> 1.3.0 and resync the ci template files 380e1c6
+* **v9:** 🐛 synchronize common files and docs a698c66
+
 ## 8.1.7 (2026-07-20)
 
 ### Bug Fixes
